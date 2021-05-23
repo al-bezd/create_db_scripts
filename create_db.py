@@ -6,23 +6,6 @@ from psycopg2 import Error
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import pymysql
 
-'''
-
- 
-con = pymysql.connect('localhost', 'user17', 
-    's$cret', 'mydb')
- 
-with con:
-    
-    cur = con.cursor()
-    cur.execute("SELECT VERSION()")
- 
-    version = cur.fetchone()
-    
-    print("Database version: {}".format(version[0]))
-'''
-
-
 class pgDatabaseManager(object):
     cursor = ''
     connection = ''
